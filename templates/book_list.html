@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Books</h2>
+
+<table>
+
+<tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Actions</th>
+</tr>
+
+{% for book in books %}
+
+<tr>
+
+    <td>{{ book.title }}</td>
+
+    <td>{{ book.author }}</td>
+
+    <td>
+
+        <a class="btn"
+        href="{% url 'book_detail' book.id %}">
+        View
+        </a>
+
+        <a class="btn"
+        href="{% url 'edit_book' book.id %}">
+        Edit
+        </a>
+
+        <a class="btn"
+        href="{% url 'delete_book' book.id %}">
+        Delete
+        </a>
+
+    </td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}
+</body>
+</html>

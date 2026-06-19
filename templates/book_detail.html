@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   {% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ book.title }}</h2>
+
+<p>Author: {{ book.author }}</p>
+<p>ISBN: {{ book.isbn }}</p>
+<p>Price: {{ book.price }}</p>
+<p>Date: {{ book.published_date }}</p>
+
+<a href="/">Back</a>
+
+{% endblock %}
+</body>
+</html>
