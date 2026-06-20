@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-##gcc6lkze2euoiq-kryl**6l4awtst-x5ry&x9!41380e9k-(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com']
 
 
 # Application definition
@@ -118,7 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 LOGIN_URL = '/accounts/login/'
